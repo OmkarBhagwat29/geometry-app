@@ -1,0 +1,43 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(126, 255, 195, 0.281);
+
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column;
+}
+
+.pic {
+  width: 200px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.pic-name-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-style: solid;
+  border-width: 1px; */
+}
+
+.name {
+  user-select: none;
+  display: inline-block;
+  font-size: 100px;
+  font-weight: 700;
+  color: #333; /* Optional: text color */
+  text-align: center;
+  width: 100%;
+
+  font-family: "Roboto", arial;
+}

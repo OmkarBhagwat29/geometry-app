@@ -1,0 +1,8 @@
+/* styles.css */
+.selection-overlay {
+  position: absolute;
+  border: 2px dashed rgba(0, 122, 255, 0.7);
+  background-color: rgba(0, 122, 255, 0.2);
+  pointer-events: none; /* Prevent mouse events on the overlay */
+  display: none; /* Hide by default */
+}

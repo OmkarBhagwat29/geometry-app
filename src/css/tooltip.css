@@ -1,0 +1,14 @@
+.tooltip {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  position: fixed;
+  /* transform: translateX(-50%); Offset to center */
+  background-color: rgba(116, 114, 114, 0.75); /* Dark background */
+  color: white; /* Text color */
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap; /* Prevents text from wrapping */
+  z-index: 10; /* Ensure it appears above other elements */
+  margin-bottom: 5px; /* Space between tooltip and item */
+  height: 15px;
+}

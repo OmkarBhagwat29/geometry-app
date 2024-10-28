@@ -1,0 +1,10 @@
+.feature {
+  position: absolute;
+  border: none;
+  background-color: rgba(168, 255, 255, 0.637);
+  color: black;
+  font-size: 18px;
+  pointer-events: none;
+  overflow: hidden;
+  padding: 3px;
+}
