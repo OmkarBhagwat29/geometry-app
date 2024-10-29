@@ -1,10 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
 }
 
 html {
-  background: #052e6d;
+  background: white;
 }
 
 #root {
