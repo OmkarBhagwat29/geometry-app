@@ -1,7 +1,6 @@
 import * as th from "three";
 import { Constant } from "./constants";
 
-
 const intersectionPoint = new th.Vector3();
 //const planeNormal = new THREE.Vector3();
 //const plane = new THREE.Plane();

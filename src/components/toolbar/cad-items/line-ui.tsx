@@ -1,13 +1,15 @@
 import React from "react";
 import TooltipWrapper from "../tooltip-wrapper";
-import { useAppContext } from "../../../core/app-context";
+import { useGeometry } from "../../../context/GeometryContext";
 
 const LineUI = () => {
-  const [, dispatch] = useAppContext();
+  const { runCommand } = useGeometry();
 
-  const handleOnClick = (e: React.MouseEvent<HTMLImageElement>) => {
+  const handleOnClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-    dispatch({ type: "DRAW", payload: { geomType: "LINE" } });
+    e.preventDefault();
+
+    runCommand("line");
   };
 
   return (

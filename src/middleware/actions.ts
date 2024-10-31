@@ -1,7 +1,7 @@
 import { pointRelationModel } from "../ai-models/point-relation-model";
 import { SnapOption } from "../components/toolbar/snap-options";
 
-export type DrawType = "POINT" | "LINE" | "POLYLINE";
+export type DrawType = "POINT" | "LINE" | "POLYLINE" | 'CIRCLE';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type Action =
