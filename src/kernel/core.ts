@@ -56,3 +56,15 @@ export const remap = (
 ): number => {
   return ((value - fromMin) * (toMax - toMin)) / (fromMax - fromMin) + toMin;
 };
+
+export const getPolarCoordinate = (
+  x: number,
+  y: number,
+  length: number,
+  angle: number
+): { dX: number; dY: number } => {
+  const dX = length * Math.cos(angle) + x;
+  const dY = length * Math.sin(angle) + y;
+
+  return { dX, dY };
+};

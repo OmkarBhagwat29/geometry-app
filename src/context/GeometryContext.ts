@@ -8,6 +8,7 @@ interface GeometryContextProps {
   command: CADType;
   runCommand: (command: CADType) => void;
   addObject: (obj: Object3D) => void;
+  addObjects: (objs: Object3D[]) => void;
 }
 
 export const GeometryContext = createContext<GeometryContextProps>({
@@ -15,6 +16,7 @@ export const GeometryContext = createContext<GeometryContextProps>({
   command: null,
   runCommand: (command: CADType) => {},
   addObject: (obj: Object3D) => {},
+  addObjects: (objs: Object3D[]) => {},
 });
 
 export const useGeometry = () => {

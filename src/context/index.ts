@@ -5,11 +5,7 @@ import {
   CADType,
 } from "./GeometryContext";
 
-export {
-  GeometryContext as CADItemsContext,
-  GeometryProvider as CADItemsProvider,
-  useGeometry as useCADItems,
-};
+export { GeometryContext, GeometryProvider, useGeometry };
 export type { CADType };
 
 import {

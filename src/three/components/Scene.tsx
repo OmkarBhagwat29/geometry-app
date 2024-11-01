@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { FC, ReactNode } from "react";
 
@@ -15,9 +15,9 @@ const Scene: FC<SceneProps> = ({ children }) => {
         left: 0,
         zIndex: -1,
       }}
-      camera={{ fov: 45, near: 0.5, far: 10000, position: [5, 5, 5] }}
     >
-      <OrbitControls />
+      <OrthographicCamera makeDefault position={[0, 3, 2.5]} zoom={100} />
+      {/* <OrbitControls enabled={false} /> */}
       <axesHelper />
 
       {children}

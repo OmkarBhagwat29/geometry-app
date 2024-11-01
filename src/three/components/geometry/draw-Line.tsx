@@ -3,11 +3,11 @@ import React, { useEffect, useRef } from "react";
 import { Line } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
 
-import { useCADItems } from "../../../context";
+import { useGeometry } from "../../../context";
 import { useDrawLine } from "../../hooks/useDrawLine";
 
 const DrawLine = () => {
-  const { addObject } = useCADItems();
+  const { addObject } = useGeometry();
 
   const { scene, camera, size } = useThree();
 

@@ -15,6 +15,15 @@ export class KLine {
     this.end_point = p2;
   }
 
+  static Create(start: Vector, len: number, angle: number): KLine {
+    const dX = len * Math.cos(angle);
+    const dY = len * Math.sin(angle);
+
+    const end = new Vector([start.get_x() + dX, start.get_y() + dY]);
+
+    return new KLine(start, end);
+  }
+
   evaluate(t: number): Vector {
     const point = this.end_point
       .subtract(this.start_point)

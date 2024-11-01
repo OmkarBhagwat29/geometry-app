@@ -61,3 +61,10 @@ export const getCentroid = (obj: th.Object3D): th.Vector3 | null => {
 
   return null;
 };
+
+export const getRandomWarmColor = () => {
+  const hue = Math.floor(Math.random() * 60); // 0 to 60 for warm colors
+  const saturation = Math.floor(60 + Math.random() * 40); // 60% to 100% saturation
+  const lightness = Math.floor(40 + Math.random() * 20); // 40% to 60% lightness
+  return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+};

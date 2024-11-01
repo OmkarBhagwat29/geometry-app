@@ -2,11 +2,11 @@ import { Point, Points } from "@react-three/drei";
 import React, { useEffect, useRef } from "react";
 
 import { useThree } from "@react-three/fiber";
-import { useCADItems } from "../../../context";
+import { useGeometry } from "../../../context";
 import { useDrawPoint } from "../../hooks/useDrawPoint";
 
 const DrawPoint = () => {
-  const { addObject } = useCADItems();
+  const { addObject } = useGeometry();
 
   const { camera, size } = useThree();
 

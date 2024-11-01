@@ -1,10 +1,10 @@
 import React from "react";
-import { useCADItems } from "../../../context";
+import { useGeometry } from "../../../context";
 import DrawLine from "./draw-Line";
 import DrawPoint from "./draw-point";
 
 const GeometryWrapper = () => {
-  const { command } = useCADItems();
+  const { command } = useGeometry();
   return (
     <>
       {command === "line" && <DrawLine />}
