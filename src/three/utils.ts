@@ -68,3 +68,17 @@ export const getRandomWarmColor = () => {
   const lightness = Math.floor(40 + Math.random() * 20); // 40% to 60% lightness
   return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 };
+
+export const getObjectsByNames = (
+  model: th.Object3D,
+  names: string[]
+): th.Object3D[] => {
+  const foundObjs: th.Object3D[] = [];
+
+  model.traverse((child) => {
+    if (names.includes(child.name)) {
+      foundObjs.push(child);
+    }
+  });
+  return foundObjs;
+};

@@ -9,10 +9,10 @@ import { getPolarCoordinate, remap } from "../../../kernel/core";
 import { getRandomWarmColor } from "../../utils";
 
 export interface FkSystemProps {
-  linksProps: FkLinkProps[];
+  linksProps: FKLinkProps[];
 }
 
-export interface FkLinkProps {
+export interface FKLinkProps {
   start: Vector3;
   childrenCount: number;
   childrenLengths: number[];
@@ -37,7 +37,7 @@ export class FkSystem {
         linkProps.ts[0]
       );
 
-      for (let j = 1; j < linkProps.childrenCount; j++) {
+      for (let j = 1; j < linkProps.childrenCount!; j++) {
         link.addChild(
           linkProps.childrenLengths[j],
           0,
@@ -60,7 +60,7 @@ export class FkSystem {
   };
 
   static createDefault = () => {
-    const fkLinkProps: FkLinkProps[] = [
+    const fkLinkProps: FKLinkProps[] = [
       {
         start: new Vector3(0, 0, 1),
         childrenCount: 3,

@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { useGeometry } from "../../../../context";
 import { useIK } from "../../../hooks/IK/useIK";
+import { useThree } from "@react-three/fiber";
 
 const SimInverseKinematics = () => {
   const { addObjects } = useGeometry();
+  const { scene } = useThree();
 
-  const objects = useIK();
+  const objects = useIK(scene);
 
   useEffect(() => {
     if (objects) {
